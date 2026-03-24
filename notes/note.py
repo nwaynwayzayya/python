@@ -98,16 +98,18 @@
 
 
 # Functions
-def my_function():
-    print("It worked")
+# def my_function():
+#     print("It worked")
 
-my_function()
+# my_function()
 
-# passing parameters
-def my_function2(i):
-    var = i + 3
-    print(var)
+# # passing parameters
+# def my_function2(i):
+#     var = i + 3
+#     print(var)
 
-my_function2(input("what would you like to add 3"))
+# my_function2(input("what would you like to add 3"))
 
+
+# -------------------------------------------------------------------------------------------------------------------------- #
 
