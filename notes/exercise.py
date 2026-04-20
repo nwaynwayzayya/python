@@ -64,3 +64,21 @@
 #     print(var)
 
 # my_function(input("what is the first letter of your name? "))
+
+
+# # -------------------------------------------------------------------------------------------------------------------------- #
+
+# Create a program that calculates the sqft of a room
+# Make a function that calculates two parameters that are passed in
+# Take an input for width and height as variables
+# Call the function and pass in the width and height
+# Multiple w * h
+# Print the final result
+
+def cal_sqft(w,h):
+    print(f"\nThe square feet of the room with width, {w}, and height, {h}, is {w*h}.")
+
+width = int(input("Enter the width of the room: "))
+height = int(input("Enter the height of the room: "))
+
+cal_sqft(width, height)
