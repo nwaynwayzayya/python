@@ -75,10 +75,38 @@
 # Multiple w * h
 # Print the final result
 
-def cal_sqft(w,h):
-    print(f"\nThe square feet of the room with width, {w}, and height, {h}, is {w*h}.")
+# def cal_sqft(w,h):
+#     print(f"\nThe square feet of the room with width, {w}, and height, {h}, is {w*h}.")
 
-width = int(input("Enter the width of the room: "))
-height = int(input("Enter the height of the room: "))
+# width = int(input("Enter the width of the room: "))
+# height = int(input("Enter the height of the room: "))
 
-cal_sqft(width, height)
+# cal_sqft(width, height)
+
+
+# # -------------------------------------------------------------------------------------------------------------------------- #
+
+# Create a dictionary that will let you add a student and their grade
+# You will need a while loop to complete this task
+
+# Small program for a grade result keeping dictionary
+
+student_grades = {}
+
+user_condition = True
+
+while (user_condition):   # OR we can write:    while not user_conditon:
+    name = input("Enter the student's name: ")
+    grade = input("Enter the student's grade: ")
+    student_grades[name] = grade
+    print("Student added successfully!")
+    print(student_grades)
+
+    question = input("\nWould you like to continue? (y/n) ").lower()
+    if (question == "n"):
+        user_condition = False
+
+print("\nHere is your student and grade list.")
+print(student_grades)
+    
+

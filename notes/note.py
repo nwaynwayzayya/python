@@ -113,3 +113,32 @@
 
 # -------------------------------------------------------------------------------------------------------------------------- #
 
+
+
+# Dictionaries
+
+# dictionary = {"name": "Norelle", "age": "21"}
+# # name == key
+# # "Norelle" == value 
+# # dictionaries are key-value pairs
+
+# dictionary["id"] = 1    # Adding value to a dictionary
+# print(dictionary)
+
+# dictionary = {}   # Empty the dictionary
+# dictionary["id"] = 1
+
+# print(dictionary)    # We get the value using the key
+
+# Looping through the dicitonary 
+
+dictionary2 = {"name": "Norelle", "age": "21", "id": 1}
+print(dictionary2)
+
+for thing in dictionary2:
+    print(thing)   # Prints only the key 
+    print(dictionary2[thing])    # Prints the value of each key
+
+
+for key,value in dictionary2.items():   # Prints both the key and value using ".items()"
+    print(key,value)
