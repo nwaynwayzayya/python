@@ -1,6 +1,4 @@
 https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement#bodyContent
-https://foundation.wikimedia.org/w/index.php?title=Special:UserLogin&returnto=Policy%3ACookie+statement
-https://foundation.wikimedia.org/w/index.php?title=Special:UserLogin&returnto=Policy%3ACookie+statement
 https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement#What_is_a_cookie?
 https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement#What_types_of_cookies_does_Wikimedia_use_and_for_what_purposes?
 https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement#What_are_my_cookie_options?
@@ -14,4 +12,3 @@ https://foundation.wikimedia.org/wiki/Policy:Cookie_statement
 https://foundation.wikimedia.org/w/index.php?title=Policy:Cookie_statement&action=edit
 https://foundation.wikimedia.org/w/index.php?title=Policy:Cookie_statement&action=history
 https://foundation.wikimedia.org/wiki/Special:WhatLinksHere/Policy:Cookie_statement
-https://foundation.wikimedia.org/wiki/Special:RecentChangesLinked/Policy:Cookie_statement
