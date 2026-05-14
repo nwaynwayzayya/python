@@ -1,9 +1,45 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
+
+# The account the youtuber created for testing this tool only 
+# https://github.com/usernam121
 
 driver = webdriver.Chrome()
 
-driver.get("https://www.amazon.com/HV-F2056-15-6-17-Laptop-Cooler-Cooling/dp/B00NNMB3KS/ref=sr_1_20?dib=eyJ2IjoiMSJ9.2qqLtTgwGr9VyEgWhZH2Uex9sHqXlApnghFDwYHCTlqnLptsWpZhtiUjlj_YnMLV4SpJ2l6uG_0tFjJcy_46VdOG8F8wOsrkML5GvUk5BXsEAoOfZIIk7SQii8nU2b-zwtgERPRv9hQunCLNte1HUIT31h9VJ8-BTzdAeqaMWRAxipB3uKPMNh0Rh5UhFzTNzIuRYoglpl92eEVhGG-CxD4qk0-Iy_aM9tYqwuERmXEhh2tosfqIkA8CtHP6Rka_a45j-n4qfvUc8gAKD738i6Cdto6jgP9P51A7dqhBf18.IQw6VwTc6pVGWO0H1CTPmvjEkwTJiaWpRMYjq961nSA&dib_tag=se&qid=1778700205&s=computers-intl-ship&sr=1-20&th=1")
-price = driver.find_element(By.CLASS_NAME, "a-price-whole")
-print(price.text)
+driver.get("https://github.com/usernam121")
+repo = "https://github.com/usernam121"
+
+# time.sleep(2)
+resources = driver.find_elements(By.CLASS_NAME, "repo")
+
+links = []
+repo_links = []
+
+
+def loop(repo_link):
+    driver.get(repo_link)
+    # repo_name = driver.find_elements(By.CLASS_NAME, "Link--primary")  -----this also prints other element names-----
+    
+    # [href*='blob'] means "find links where the URL contains 'blob'"
+    # [href*='tree'] catches inner folders if they exist
+    repo_names = driver.find_elements(By.CSS_SELECTOR, "a.Link--primary[href*='/blob/'], a.Link--primary[href*='/tree/']")
+    for i in repo_names:
+        print(i.text)    
+
+
+for i in resources:
+    links.append(i.text)
+
+# print(links)
+
+for l in links: 
+    repo_link = f"{repo}/{l}"
+    repo_links.append(repo_link)
+    loop(repo_link)
+
+# print(repo_links)
+
+time.sleep(2)
+# price = driver.find_element(By.CLASS_NAME, "a-price-whole")
 driver.quit()
