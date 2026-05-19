@@ -17,6 +17,18 @@ links = []
 repo_links = []
 
 
+def going_for_raw(file_in_repo):
+    driver.get(file_in_repo)
+    raw_button = driver.find_element(By.CSS_SELECTOR, 'a[data-testid="raw-button"]')
+    raw_button.click()
+    raw_code = driver.find_element(By.TAG_NAME, "body").text
+    # print(raw_code)
+
+    if "password" in raw_code:
+        print("found password!")
+
+
+
 def loop(repo_link):
     driver.get(repo_link)
     # repo_name = driver.find_elements(By.CLASS_NAME, "Link--primary")  -----this also prints other element names-----
@@ -24,8 +36,14 @@ def loop(repo_link):
     # [href*='blob'] means "find links where the URL contains 'blob'"
     # [href*='tree'] catches inner folders if they exist
     repo_names = driver.find_elements(By.CSS_SELECTOR, "a.Link--primary[href*='/blob/'], a.Link--primary[href*='/tree/']")
-    for i in repo_names:
-        print(i.text)    
+    for file_name in repo_names:
+        # print(file_name.text)   
+        pass 
+
+    if "py" in file_name.text:
+        file_in_repo = f"{repo_link}/blob/main/{file_name.text}"
+        going_for_raw(file_in_repo)
+        # print(file_in_repo)
 
 
 for i in resources:
